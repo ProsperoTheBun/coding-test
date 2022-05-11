@@ -1,5 +1,3 @@
-# coding-test-marcus.cunningham
-
 
 The VS Solution is `AAL.Accounts.sln`.
 
