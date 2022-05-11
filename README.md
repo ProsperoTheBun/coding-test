@@ -1,3 +1,4 @@
+Based on the specification doc: [Coding Exercise.docx](/Coding Exercise.docx)
 
 The VS Solution is `AAL.Accounts.sln`.
 
