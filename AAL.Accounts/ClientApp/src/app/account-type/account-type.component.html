@@ -1,0 +1,11 @@
+<ng-container *ngIf="accountTypes$ | async as accountTypes">
+    <div class="form-group">
+        <label for="accountType">Filter by Account Type</label>
+        <select [formControl]="selectedAccountType" class="form-control" (change)="onChange()" name="accountTypeSelect">
+            <option [ngValue]="null">All</option>
+            <option *ngFor="let at of accountTypes" [ngValue]="at">
+                {{ at.Name }}
+            </option>
+        </select>
+    </div>
+</ng-container>

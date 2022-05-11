@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Accounts</h1>
+    <div>
+        <app-account-type
+            [accountTypes$]="accountTypes$"
+            [currentSelection$]="selectedAccountTypeFilter$"
+        ></app-account-type>
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Type</td>
+                    <td>Balance</td>
+                    <td>Address</td>
+                </tr>
+                <tr *ngFor="let account of accounts$ | async">
+                    <td>{{ account.FirstName }}</td>
+                    <td>{{ account.LastName }}</td>
+                    <td>{{ account.AccountType?.Name }}</td>
+                    <td>{{ account.Balance }}</td>
+                    <td>{{ account.Address?.City }}, {{ account.Address?.Postcode }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

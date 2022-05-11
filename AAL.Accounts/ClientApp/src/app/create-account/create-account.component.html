@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Create New Account</h1>
+    <div class="container">
+        <form (ngSubmit)="onSubmit()" [formGroup]="accountForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" formControlName="firstName" id="firstName" />
+                <!-- <div class="alert alert-danger" *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+                    <div *ngIf="firstName.errors.required">First Name is required.</div>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" formControlName="lastName" id="lastName" />
+                <!-- <div class="alert alert-danger" *ngIf="!accountForm..valid && (lastName.dirty || lastName.touched)">
+                    <div *ngIf="lastName.errors.required">Last Name is required.</div>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label for="balance">Balance</label>
+                <input type="number" class="form-control" id="balance" formControlName="balance" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" [disabled]="!accountForm.valid">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
